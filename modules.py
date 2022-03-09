@@ -111,7 +111,7 @@
 # task 7
 
 # import sys
-#
+
 # a = input(sys.argv)
 # b = []
 # b.append(a)
@@ -120,13 +120,13 @@
 
 # task 8
 # import sys
-#
+
 # a = input("1: ")
 # b = input("2: ")
 # if a > b:
-#     print(sys.maxsize)
+#     print(sys.getsizeof(a))
 # if a < b:
-#     print(sys.maxsize)
+#     print(sys.getsizeof(b))
 
 # task 9
 # import random
@@ -231,5 +231,149 @@
 #     print(y)
 
 
+# Напишите функцию которая принимает 2 Dictionary и добавляет втрорую Dictionary к первой
+# def dict_appender(dic1, dic2):
+#     dic1.update(dic2)
+#     print(dic1)
+#
+# dic1 = {1: 'python'}
+# dic2 = {2: 'java'}
+# dict_appender(dic1, dic2)
 
 
+# Напишите функцию которая спрашивает у вас чтобы вы хотели заказать покушать и выпить.
+# А затем записывает это всё в файл на рабочем столе menu.txt
+# def order_eat(order):
+#     with open("C:\\Users\\Sayfullah\\Desktop\\menu.txt", "w") as file:
+#         file.write(order)
+#     print("Success!!!")
+#
+# eat_and_drink = input("чтобы вы хотели заказать покушать и выпить: ")
+# order_eat(eat_and_drink)
+
+
+# Создайте функцию которая принимает слово и создаёт файл с таким именем в той же директории,
+# где был запущен Ваш .py файл.
+# def write_word(word):
+#     file = open("pythonProject.txt", "w")
+#     file.write(word)
+#     file.close()
+#     print("success!!!")
+#
+# write_word("kylych")
+
+
+# Создайте 2 функции где одна функция вложена в другую.
+# Главная функция должна выводить на экран текст: "Я главная функция".
+# А вложенная функция должна выводить на экран: "Я вложенная функция."
+# def nested_func():
+#     print("Я вложенная функция")
+#
+#
+# def main_func():
+#     print("Я главная функция")
+#     nested_func()
+#
+#
+# main_func()
+
+
+# Создайте функцию которая принмает тип данных dictionary,
+# но возвращает два Tuple в одном из них все ключи,
+# в другом только значения.
+# def dict(dict):
+#     tup1 = (1, 2, 3)
+#     tup2 = ("python", "java", "php")
+#     return tup1, tup2
+#
+#
+# dic = {1: 'python'}
+# print(dict(dic))
+
+
+# Напишите программу которая определяет ПРОСТЫЕ ЧИСЛА.
+# Простое число - это число которое делится только на себя и на 1.
+# def prime(number):
+#     n = number
+#     counter = 0
+#     for i in range(1, n + 1):
+#         if n % i == 0:
+#             counter += 1
+#     return 'Простое число' if counter == 2 else 'Составное число'
+#
+#
+# print(prime(3))
+
+
+# Напишите функцию которая принимает 2 аргумента.
+# Эти аргументы могут быть любого типа данных но функция должна
+# Вам вернуть эти аргументы как тип данных List.
+# def any_args(*args):
+#     ls = [args]
+#     args = ls
+#     return args
+#
+#
+# print(any_args(1, 2, 3))
+
+
+# Напишите функцию которая спрашивает у пользователя число
+# и выводит ему на экран именно столько строк самой себя как текст.
+# def ask_number(number):
+#     st = "a"
+#     for i in range(number):
+#         st += str(i)
+#     print(st)
+#
+# ask_number(5)
+
+
+# Создайте функцию которая принимает Имя пользователя и его зарплату и возвращает это строкой как:
+# ИМЯ - ЗАРПЛАТА.Если в функции не была указана зарплата - подставьте её сами.
+# Значение по умолчанию - 5000.
+# def name_salary(name, salary=5000):
+#     print("ИМЯ:", name, "ЗАРПЛАТА:", salary)
+#
+#
+# name_salary("kylych")
+
+
+# Напишите функцию которая спрашивает число N и генерирует вам List состоящий из N разных элементов.
+# def gen_number(number):
+#     ls = []
+#     import random
+#     number = random.randint(1, 10)
+#     ls.append(number)
+#     return ls, number
+#
+#
+# print(gen_number(5))
+
+
+
+# n = 16
+# k = n - 1
+# for i in range(0, n):
+#         for j in range(0, k):
+#                 print(end=" ")
+#         k -= 1
+#         for j in range(0, i+1):
+#                 print("*", end=" ")
+#         print("*/*|*\*/*|*\*|*/*\\*/*|*\*/*|*\*|*/*\\*/*|*\*/*|*\*|*/*\\*/*|*\*/*|*\*|*/*\\")
+
+
+# for i in range(15):
+#     if i < 5:
+#         print('|*                              *|                                                                     *\r')
+#     if i == 5:
+#         print('|*        ***********           *|                               *****************                     *')
+#     if i >5 and i<12:
+#         print('|*        *         *           *|                               *               *                     *\r')
+#     if i ==12 :
+#         print('|*        *         *           *|                               *****************                     *\r')
+    
+#     if i >11:
+#         print('|*        *         *           *|                                                                     *\r')
+     
+#     if i==14:
+#         print('********************************************************************************************************')

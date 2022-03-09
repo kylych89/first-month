@@ -127,33 +127,39 @@ with open('/home/kylych/Рабочий стол/python files/database.txt', 'a+'
 
 # 6 Задание
 # 6 Задание
-'''
-with open('/home/kylych/Рабочий стол/python files/task6.txt', 'w') as file:
-    for i in range(1):
-        login = input('Введите логин: ')
-        password = input('Введите пароль: ')
-        path_photo = input('Ваше фото пожалуйста: ')
-        if path_photo:
-            file.write('\n')
-            file.write('Логин: ')
-            file.write(login)
-            file.write('\n')
-            file.write('Пароль: ')
-            file.write(password)
-            file.write('\n')
-            file.write('Место для фото ')
-            file.write(path_photo)
-        else:
-            print('Что то пошло не так!!!')
+# try:
+#     with open(f'{photo}', 'rb'):
+#         print('Такой файл существует')
+# except FileNotFoundError:
+#     print('Введите кореектный файл')
 
-print('Регистрация Успешна!')
-'''
+# with open('task6.txt', 'w') as file:
+    
+#     login = input('Введите логин: ')
+#     password = input('Введите пароль: ')
+#     photo = input('Ваше фото пожалуйста: ')
+#     try:
+#         with open(f'{photo}', 'rb'):
+#             print('Такой файл существует')
+#             file.write('\n')
+#             file.write('Логин: ')
+#             file.write(login)
+#             file.write('\n')
+#             file.write('Пароль: ')
+#             file.write(password)
+#             file.write('\n')
+#             file.write('Место для фото ')
+#             file.write(photo)
+#             print('Регистрация Успешна!')
+#     except FileNotFoundError:
+#         print('Введите кореектный файл')
+#     finally:
+#         print('ПРОГРАММА ЗАВЕРШЕНА')
+    
 
-'''
-with open('/home/kylych/Рабочий стол/python files/task6.txt', 'r') as file:
-    for i in file.read().split():
-        print(i, end=" ")
-'''
+# with open('task6.txt', 'r') as file:
+#     for i in file.read().split():
+#         print(i, end=" ")
 
 
 
