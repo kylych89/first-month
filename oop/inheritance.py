@@ -41,3 +41,59 @@ z = Zoo()
 # print(z.animal_3)
 
 
+# task 3
+class Furniture:
+    def __init__(self, name, bed, cupboard, table):
+        self.name = name
+        self.bed = bed
+        self.cupboard = cupboard
+        self.table = table
+
+
+class Home(Furniture):
+    def __init__(self, name, square, bed, cupboard, table):
+        super().__init__(name, bed, cupboard, table)
+        self.name = name
+        self.square = square
+
+    def count(self):
+        count = self.square - self.bed - self.cupboard - self.table
+        print("Тип дома:", self.name)
+        print("общая площадь:", self.square)
+        print("оставшаяся площадь дома:", count)
+        print("Кровать:", self.bed)
+        print("Шкаф::", self.cupboard)
+        print("Стол::", self.table)
+
+
+h = Home('my home', 20, 4, 2, 1.5)
+# h.count()
+
+
+# task 4
+class Car:
+    def __init__(self, make, model, year, odometer=0, fuel=70):
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer = odometer
+        self.fuel = fuel
+
+    def drive(self, km):
+        fuel = km / 10
+        if self.fuel >= fuel:
+            self.__add_distance(km)
+            self.__subtract_fuel(fuel)
+            print("lets drive!")
+        else:
+            print('Need more fuel, please, fill more!')
+
+    def __add_distance(self, km):
+        self.odometer += km
+
+    def __subtract_fuel(self, fuel):
+        self.fuel -= fuel
+
+
+c = Car("Japan", 'Toyota', 2003)
+# c.drive(200)
