@@ -90,6 +90,7 @@ class Car:
 
     def __add_distance(self, km):
         self.odometer += km
+        print(self.odometer)
 
     def __subtract_fuel(self, fuel):
         self.fuel -= fuel

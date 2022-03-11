@@ -1,7 +1,4 @@
 # task 1
-from posixpath import split
-
-
 class Laptop:
     def __init__(self, cpu, ram, video_card, ssd, mother_board, screen_size) -> None:
         self.cpu = cpu
@@ -10,6 +7,7 @@ class Laptop:
         self.ssd = ssd
         self.mother_board = mother_board
         self.screen_size = screen_size
+        print({'cpu': self.cpu, 'ram': self.ram, 'video_card': self.video_card, 'ssd': self.ssd, 'mother_board': self.mother_board, 'screen_size': self.screen_size})
 
     def display(self):
         dic = {
@@ -20,14 +18,13 @@ class Laptop:
             'mother_board': self.mother_board,
             'screen_size': self.screen_size
         }
-        print(dic)
-        # print({'cpu': self.cpu, 'ram': self.ram, 'video_card': self.video_card, 'ssd': self.ssd, 'mother_board': self.mother_board, 'screen_size': self.screen_size})
+        print(dic)        
 
 
 l = Laptop('intel core i7', '14 GB', 'GEFORCE', 'SSD Teamgroup NVMe MP33 128GB M.2 2280', 'Asus Prime H310M-K',
            '13–15 дюймов 1400 × 1050')
 # l.display()
-# print(l)
+print(l)
 
 
 # Data #1:
@@ -222,4 +219,4 @@ d  = Data(data)
 # print(d.get_names_tuple())
 # print(d.get_location_tuple())
 # print(d.get_dict_all())
-d.add_field_id()
+# d.add_field_id()
